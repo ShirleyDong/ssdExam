@@ -55,19 +55,20 @@ class TestSubject < MiniTest::Test
 
    def test_merge_topics
      # To be completed
+     addSomeTopics
+
      topic4 = Topic.new 13, 'topic 5'
      result = @subject.mergeTopics 'topic1', 'topic2', 'topic5'
-     assert_equal 1, result.size
      assert result
+     assert_equal 1, result.size
+     assert_equal topic5, result
+      assert_equal(13, 
+      @topic.findTopic('topic5').noLectures)
      result = @subject.findTopic 'topic 1'
      assert_nil result
-     assert_includes false, @topic1
      result = @subject.findTopic 'topic 2'
      assert_nil result
-     #assert_includes false, @topic2
-     assert_includes result, @topic5
-     assert_equal(13, 
-           @topic.findTopic('topic5').noLectures)
+
 
 
 
